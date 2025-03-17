@@ -33,6 +33,11 @@ string name(name1);
 string name("char");
 string name(length,"char")
 
+address name.begin();
+address name.end();
+void name.push_back(char);
+void name.pop_back(char);
+void name.back();
 void name.assign(char,len);
 void name.assign(leng,char);	// 整个重新赋值
 name += char;	// 接续原有赋值
@@ -41,6 +46,29 @@ length string.size();
 ```
 
 ### 1.3 deque
+
+可以头插 也可以尾插 也可以中间插
+
+双向队列
+
+```c++
+deque<type> name;
+
+void name.push_back(elem);
+void name.push_front(elem);
+void name.pop_back();
+void name.pop_front();
+void name.insert(pos,elem);
+void name.insert(pos,n,elem);
+void name.insert(pos,beg,end);
+void name.clear();
+void name.erase(pos);
+void name.erase(beg,end);
+elem name.front();
+elem name.back();
+```
+
+
 
 ### 1.4 stack
 
@@ -73,6 +101,16 @@ length name.size();
 logic name.empty();
 ```
 
+优先队列，自动排序
+
+```C++
+priority_queue<type> name;
+elem name.top();	// 本质是堆，所以是top
+
+priority_queue<int,vector<int>,less<int>> name;	// 递减
+priority_queue<int,vector<int>,greater<int>> name;	// 递增
+```
+
 ### 1.6 list
 
 ### 1.7 set
@@ -91,10 +129,13 @@ val2 = name.second;
 
 所有元素都是pair
 
-map不允许重复键值，multimap允许
+unordered_map无序 哈希表，map不允许重复键值 红黑树，multimap允许
 
 ```c++
-map<type1,type2>na
+unordered_map<type1,type2> name;
+name[key] = value;
+
+map<type1,type2>name
 ```
 
 
